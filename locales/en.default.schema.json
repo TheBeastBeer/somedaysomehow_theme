@@ -2823,7 +2823,7 @@
       }
     },
     "product-list": {
-      "name": "Featured collection",
+      "name": "Product List",
       "settings": {
         "title": {
           "label": "Heading"
@@ -2846,8 +2846,8 @@
             "label": "Uppercase"
           }
         },
-        "collection": {
-          "label": "Collection"
+        "product-list_selector": {
+          "label": "Select products to include"
         },
         "products_to_show": {
           "label": "Maximum products to show"
