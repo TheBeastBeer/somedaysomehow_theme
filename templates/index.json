@@ -5,6 +5,7 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Browse our latest products",
             "heading_size": "h1"
@@ -12,6 +13,7 @@
         },
         "button": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Shop now",
             "button_link": "shopify:\/\/collections\/all",
