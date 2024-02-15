@@ -26,7 +26,7 @@
 {%- if card_product and card_product != empty -%}
   {%- liquid
     if use_custom_card
-      assign card_media =card_product.metafields.homepage.card.references[1].image
+      assign card_media =card_product.metafield.homepage.card.references[1].image
     else
       assign card_media = card_product.featured_media
     endif
