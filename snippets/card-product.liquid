@@ -25,11 +25,11 @@
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
-    if use_custom_card
-      assign card_media =card_product.metafield.homepage.card.references[1].image
-    else
-      assign card_media = card_product.featured_media
-    endif
+    assign card_media = card_product.featured_media
+
+    #if use_custom_card
+    #  assign card_media = card_product.metafield.homepage.card.image
+    # endif
 
     assign ratio = 1
     if card_media and media_aspect_ratio == 'portrait'
@@ -57,7 +57,7 @@
       <div
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-      >
+      >{% card_product.metafield.homepage.card.image.value %}
         {%- if card_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
             <div class="media media--transparent media--hover-effect">
