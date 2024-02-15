@@ -770,7 +770,7 @@
           "content": "Product card"
         },
         "use_custom_card": {
-          "content": "Use custom product card"
+          "label": "Use custom product card"
         },
         "image_ratio": {
           "label": "Image ratio",
