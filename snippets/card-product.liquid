@@ -25,7 +25,11 @@
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
-    assign card_media = card_product.featured_media
+    if use_custom_card
+      assign card_media =card_product.metafields.homepage.card.image
+    else
+      assign card_media = card_product.featured_media
+    endif
     
     assign ratio = 1
     if card_media and media_aspect_ratio == 'portrait'
