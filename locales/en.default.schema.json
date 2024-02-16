@@ -1169,6 +1169,9 @@
         "image_overlay_opacity": {
           "label": "Image overlay opacity"
         },
+        "animate_second_image": {
+          "label": "Animate second image"
+        },
         "image_height": {
           "label": "Banner height",
           "options__1": {

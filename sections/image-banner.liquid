@@ -67,7 +67,7 @@
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
-    <div class="banner__media media{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}{% if section.settings.stack_images %} banner--stacked{% endif %}">
+    <div class="banner__media media{% if section.settings.image_behavior != 'none' and section.settings.animate_second_image %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}{% if section.settings.stack_images %} banner--stacked{% endif %}">
       {%- assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio -%}
       {{
         section.settings.image_2
@@ -271,6 +271,12 @@
     {
       "type": "header",
       "content": "t:sections.all.animation.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "animate_second_image",
+      "default": false,
+      "label": "t:sections.image-banner.settings.animate_second_image.label"
     },
     {
       "type": "select",
