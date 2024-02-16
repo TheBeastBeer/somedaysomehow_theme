@@ -7,7 +7,7 @@
   place-items: center;
 }
 
-div.media.banner--stacked > img {
+#second-image.banner--stacked > img {
   height: auto;
   position: relative;
   max-width: min(95vw, calc(var(--max-banner-height) * 0.63));
