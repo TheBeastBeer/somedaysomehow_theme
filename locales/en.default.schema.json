@@ -1245,8 +1245,8 @@
           },
           "label": "Mobile content alignment"
         },
-        "stack_images_on_mobile": {
-          "label": "Stack images on mobile"
+        "stack_images": {
+          "label": "Stack images"
         },
         "show_text_below": {
           "label": "Show container on mobile"
