@@ -1,3 +1,18 @@
+:root {
+  --max-banner-height: 80svh;
+}
+
+.banner--stacked {
+  display: grid;
+  place-items: center;
+}
+
+.banner--stacked > img {
+  height: auto;
+  position: relative;
+  max-width: min(95vw, calc(var(--max-banner-height) * 0.63));
+}
+
 .banner {
   display: flex;
   position: relative;
@@ -76,7 +91,7 @@
   }
 
   .banner--large:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
-    min-height: 80svh;
+    min-height: var(--max-banner-height);
   }
 }
 
@@ -94,7 +109,7 @@
   }
 
   .banner--large:not(.banner--adapt) {
-    min-height: 80svh;
+    min-height: var(--max-banner-height);
   }
 
   .banner__content.banner__content--top-left {
