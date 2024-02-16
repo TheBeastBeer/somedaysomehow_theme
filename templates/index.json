@@ -39,6 +39,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Cloud_background_large_3f06e9af-3fa0-4ecd-bd5f-9ab4fc53d611.webp",
+        "image_2": "shopify:\/\/shop_images\/Logo_hero_Someday_Somehow_gluten_free.webp",
+        "stack_images": true,
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -47,7 +49,6 @@
         "color_scheme": "scheme-3",
         "image_behavior": "zoom-in",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
