@@ -47,8 +47,8 @@
 
 .banner__media.animate--zoom-in > img:not(.zoom):not(.deferred-media__poster-button),
 .banner__media.animate--zoom-in > svg:not(.zoom):not(.deferred-media__poster-button) {
-  position: fixed;
-  height: 100vh;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 749px) {
