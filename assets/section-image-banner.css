@@ -11,6 +11,7 @@
   height: auto;
   position: relative;
   max-width: min(95vw, calc(var(--max-banner-height) * 0.63));
+  object-position: 75% 50%;
 }
 
 .banner {
