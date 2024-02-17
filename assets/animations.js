@@ -118,12 +118,11 @@ function triggerHoverAnimationOnScroll() {
             visibleAmount = 1 - ((element.getBoundingClientRect().bottom - window.innerHeight) / element.getBoundingClientRect().height);
           }
           
-          if (visibleAmount <= 0.0) {
-            element.style.setProperty('--visibleAmount', '0');
-          } else if (visibleAmount >= 1.0) {
-            element.style.setProperty('--visibleAmount', '1');
-          } else {
-            element.style.setProperty('--visibleAmount', visibleAmount.toString());
+          if (visibleAmount <= 0.4 && isHovering) {
+            element.classList.remove('hovering');
+          } else if (visibleAmount >= 0.6) {
+            element.classList.add('hovering');
+            isHovering = true;
           }
         }),
         { passive: true }
