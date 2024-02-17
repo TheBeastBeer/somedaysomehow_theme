@@ -5,7 +5,7 @@
   --alpha-badge-border: 0.1;
 }
 
-sticky-header ~ #MainContent {
+#MainContent {
   transform: translateY(calc(var(--header-height) * -1));
 }
 
