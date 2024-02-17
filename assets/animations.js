@@ -90,7 +90,7 @@ function percentageSeen(element) {
 function triggerHoverAnimationOnScroll() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  //if(window.matchMedia("(hover: none)").matches) {
+  if(window.matchMedia("(hover: none)").matches) {
 
   const animationTriggerElements = Array.from(document.getElementsByClassName('card-wrapper'));
 
@@ -128,7 +128,7 @@ function triggerHoverAnimationOnScroll() {
         { passive: true }
       );
     });
-  //}
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
