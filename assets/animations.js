@@ -46,7 +46,7 @@ function initializeScrollZoomAnimationTrigger() {
 
   if (animationTriggerElements.length === 0) return;
 
-  const scaleAmount = 0.8 / 100;
+  const scaleAmount = 0.8;
 
   animationTriggerElements.forEach((element) => {
     let elementIsVisible = false;
@@ -72,23 +72,38 @@ function initializeScrollZoomAnimationTrigger() {
 }
 
 function percentageSeen(element) {
-  const viewportHeight = window.innerHeight;
   const scrollY = window.scrollY;
-  const elementPositionY = element.getBoundingClientRect().top + scrollY;
-  const elementHeight = element.offsetHeight;
+  const elementTop = element.getBoundingClientRect().top;
+  const elementBottom = element.getBoundingClientRect().bottom;
+  const percentage = (scrollY - elementTop) / (elementBottom - elementTop);
 
-  if (elementPositionY > scrollY + viewportHeight) {
-    // If we haven't reached the image yet
+  if (percentage <= 0) {
     return 0;
-  } else if (elementPositionY + elementHeight < scrollY) {
-    // If we've completely scrolled past the image
-    return 100;
+  } else if (percentage >= 1) {
+    return 1;
+  } else {
+    return Math.round(percentage);
   }
 
-  // When the image is in the viewport
-  const distance = scrollY + viewportHeight - elementPositionY;
-  let percentage = distance / ((viewportHeight + elementHeight) / 100);
-  return Math.round(percentage);
+  /* Old function, by Shopify
+   * const viewportHeight = window.innerHeight;
+   * const scrollY = window.scrollY;
+   * const elementPositionY = element.getBoundingClientRect().top + scrollY;
+   * const elementHeight = element.offsetHeight;
+   * 
+   * if ((elementPositionY > scrollY + viewportHeight) || scrollY === 0) {
+   *   // If we haven't reached the image yet, or we have but are at the top of the page
+   *   return 0;
+   * } else if (elementPositionY + elementHeight < scrollY) {
+   *   // If we've completely scrolled past the image
+   *   return 100;
+   * }
+   * 
+   * // When the image is in the viewport
+   * const distance = scrollY + viewportHeight - elementPositionY;
+   * let percentage = distance / ((viewportHeight + elementHeight) / 100);
+   * return Math.round(percentage);
+   */
 }
 
 window.addEventListener('DOMContentLoaded', () => {
