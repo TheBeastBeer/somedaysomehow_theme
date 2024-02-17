@@ -112,8 +112,8 @@ function triggerHoverAnimationOnScroll() {
           if (!elementIsVisible) return;
           
           let visibleAmount = 0.0;
-          if (element.getBoundingClientRect() < window.scrollY) {
-            visibleAmount = 1 - ((window.scrollY - element.getBoundingClientRect().top) / element.getBoundingClientRect().height);
+          if (element.getBoundingClientRect().top < 0) {
+            visibleAmount = (element.getBoundingClientRect().height + element.getBoundingClientRect().top) / element.getBoundingClientRect().height;
           } else {
             visibleAmount = 1 - ((element.getBoundingClientRect().bottom - window.innerHeight) / element.getBoundingClientRect().height);
           }
