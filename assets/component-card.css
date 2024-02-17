@@ -323,7 +323,7 @@
   padding-right: 0;
 }
 
-.card--card.card--media .card__inner .card__information,
+.card--card.card--media .card__inner :not(.card__content.feature-card) .card__information,
 .card--card.card--text .card__inner,
 .card--card.card--media>.card__content .card__badge {
   display: none;
