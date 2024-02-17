@@ -13,8 +13,8 @@
   max-width: min(95vw, calc(var(--max-banner-height) * 0.66));
 }
 
-.banner:not(.banner--stacked) {
-  object-position: 80% 50%;
+.banner:not(.banner--stacked) > img {
+  object-position: 75% 50%;
 }
 
 .banner {
