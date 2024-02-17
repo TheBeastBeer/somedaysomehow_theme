@@ -129,6 +129,21 @@
   flex-grow: 1;
 }
 
+.card__content.feature-card {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card__content.feature-card > .card__information {
+  display: block;
+}
+
+.card__content.feature-card > .card__information > h3 {
+  font-size: 6cqw;
+}
+
 .card__content--auto-margins {
   grid-template-rows: minmax(0, auto) max-content minmax(0, auto);
 }
