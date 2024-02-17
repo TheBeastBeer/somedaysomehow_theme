@@ -111,13 +111,14 @@ function triggerHoverAnimationOnScroll() {
         throttle(() => {
           if (!elementIsVisible) { 
             return;
-          } else if (elementIsVisible > 0.6 ) {
+          /*} else if (elementIsVisible > 0.6 ) {
             element.classList.add('hovering');
             isHovering = true;
           } else if (elementIsVisible < 0.4 && isHovering) {
             element.classList.remove('hovering');
-            isHovering = false;
+            isHovering = false;*/
           }
+          element.style.setProperty('--visibleRatio', elementIsVisible);
         }),
         { passive: true }
       );
