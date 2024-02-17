@@ -75,7 +75,7 @@ function percentageSeen(element) {
   let scrollY = window.scrollY;
   const elementTop = element.getBoundingClientRect().top;
   const elementBottom = element.getBoundingClientRect().bottom;
-  let percentage = (scrollY - elementTop) / (elementBottom - elementTop);
+  let percentage = (scrollY - elementTop) / (elementBottom - elementTop) * 0.8;
 
   if (percentage <= 0) {
     return 0;
