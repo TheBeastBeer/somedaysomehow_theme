@@ -73,11 +73,11 @@ function initializeScrollZoomAnimationTrigger() {
 
 function percentageSeen(element) {
   let scrollY = window.scrollY;
-  const elementTop = element.getBoundingClientRect().top;
-  const elementBottom = element.getBoundingClientRect().bottom;
+  const elementTop = element.getBoundingClientRect().top + scrollY;
+  const elementBottom = element.getBoundingClientRect().bottom + scrollY;
   let percentage = (scrollY - elementTop) / (elementBottom - elementTop) * 0.8;
 
-  if (percentage <= 0) {
+  if (percentage <= 0 || NaN) {
     return 0;
   } else if (percentage >= 1) {
     return 1;
