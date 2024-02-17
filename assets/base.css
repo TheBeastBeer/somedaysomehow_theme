@@ -3385,7 +3385,9 @@ details-disclosure > details {
   }
 
   .animate--hover-3d-lift .collage__item .card-wrapper:hover .card--card,
-  .animate--hover-3d-lift .collage__item .card-wrapper:hover .card--standard .card__inner {
+  .animate--hover-3d-lift .collage__item .card-wrapper:hover .card--standard .card__inner,
+  .animate--hover-3d-lift .collage__item .card-wrapper.hovering .card--card,
+  .animate--hover-3d-lift .collage__item .card-wrapper.hovering .card--standard .card__inner {
     transform: rotate(0.5deg); /* Less intense rotation for collage items. */
   }
 
@@ -3406,7 +3408,8 @@ details-disclosure > details {
     transition: transform var(--duration-long) ease, filter var(--duration-long) ease;
   }
 
-  .animate--hover-3d-lift .card-wrapper:hover .card--shape.card--standard:not(.card--text) .card__inner {
+  .animate--hover-3d-lift .card-wrapper:hover .card--shape.card--standard:not(.card--text) .card__inner,
+  .animate--hover-3d-lift .card-wrapper.hovering .card--shape.card--standard:not(.card--text) .card__inner {
     transition: transform calc(2 * var(--duration-extended)) ease, filter var(--duration-long) ease; /* Slow the card transition speed while hover is active. */
     filter: drop-shadow(0rem 2rem 2rem rgba(0, 0, 0, 0.15)) drop-shadow(0rem 1rem 1rem rgba(0, 0, 0, 0.15));
   }
@@ -3415,6 +3418,13 @@ details-disclosure > details {
   .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__inner:after,
   .animate--hover-3d-lift
     .card-wrapper:hover
+    .card--shape.card--standard:not(.card--text)
+    .card__inner
+    .card__media:before,
+  .animate--hover-3d-lift .card-wrapper.hovering .card--card:after,
+  .animate--hover-3d-lift .card-wrapper.hovering .card--standard .card__inner:after,
+  .animate--hover-3d-lift
+    .card-wrapper.hovering
     .card--shape.card--standard:not(.card--text)
     .card__inner
     .card__media:before {
@@ -3427,6 +3437,11 @@ details-disclosure > details {
 
   .animate--hover-3d-lift
     .card-wrapper:hover
+    .card--shape.card--standard:not(.card--text)
+    .card__inner
+    .card__media:before,
+  .animate--hover-3d-lift
+    .card-wrapper.hovering
     .card--shape.card--standard:not(.card--text)
     .card__inner
     .card__media:before {
@@ -3462,7 +3477,9 @@ details-disclosure > details {
   }
 
   .animate--hover-3d-lift .card-wrapper:hover .card--card:before,
-  .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__media:after {
+  .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__media:after,
+  .animate--hover-3d-lift .card-wrapper.hovering .card--card:before,
+  .animate--hover-3d-lift .card-wrapper.hovering .card--standard .card__media:after {
     opacity: 0.2;
     transition: background-position 6s ease, opacity var(--duration-long) ease;
     background-position: left;
@@ -3487,7 +3504,9 @@ details-disclosure > details {
   }
 
   .animate--hover-vertical-lift .card-wrapper:hover .card--card,
-  .animate--hover-vertical-lift .card-wrapper:hover .card--standard .card__inner {
+  .animate--hover-vertical-lift .card-wrapper:hover .card--standard .card__inner,
+  .animate--hover-vertical-lift .card-wrapper.hovering .card--card,
+  .animate--hover-vertical-lift .card-wrapper.hovering .card--standard .card__inner {
     transform: translateY(-0.75rem);
   }
 
