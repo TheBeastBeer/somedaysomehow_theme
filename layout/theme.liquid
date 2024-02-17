@@ -279,9 +279,6 @@
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
-
-      // Set header-height CSS variable
-      document.documentElement.style.setProperty('--header-height', `${document.querySelector('.section-header').offsetHeight}px`);
     </script>
   </head>
 
@@ -295,9 +292,7 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    <div id="HeaderGroupWrapper">
-      {% sections 'header-group' %}
-    </div>
+    {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
