@@ -97,11 +97,11 @@ function triggerHoverAnimationOnScroll() {
   if (animationTriggerElements.length === 0) return;
 
     animationTriggerElements.forEach((element) => {
-      let elementIsVisible = false;
+      let elementIsVisible = 0.0;
       let isHovering = false;
       const observer = new IntersectionObserver((elements) => {
         elements.forEach((entry) => {
-          elementIsVisible = entry.isIntersecting;
+          elementIsVisible = entry.intersectionRatio;
         });
       });
       observer.observe(element);
@@ -111,11 +111,11 @@ function triggerHoverAnimationOnScroll() {
         throttle(() => {
           if (!elementIsVisible) { 
             return;
-          } else if (percentageSeen(element) > 0.6 ) {
+          } else if (elementIsVisible > 0.6 ) {
             element.classList.add('hovering');
             isHovering = true;
-          } else if (percentageSeen(element) < 0.4 && isHovering) {
-            element.classList.remove('hoverin');
+          } else if (elementIsVisible < 0.4 && isHovering) {
+            element.classList.remove('hovering');
             isHovering = false;
           }
         }),
