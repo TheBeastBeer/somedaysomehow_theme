@@ -72,17 +72,17 @@ function initializeScrollZoomAnimationTrigger() {
 }
 
 function percentageSeen(element) {
-  const scrollY = window.scrollY;
+  let scrollY = window.scrollY;
   const elementTop = element.getBoundingClientRect().top;
   const elementBottom = element.getBoundingClientRect().bottom;
-  const percentage = (scrollY - elementTop) / (elementBottom - elementTop);
+  let percentage = (scrollY - elementTop) / (elementBottom - elementTop);
 
   if (percentage <= 0) {
     return 0;
   } else if (percentage >= 1) {
     return 1;
   } else {
-    return Math.round(percentage);
+    return percentage;
   }
 
   /* Old function, by Shopify
