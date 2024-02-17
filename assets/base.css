@@ -2365,7 +2365,15 @@ product-info .loading__spinner:not(.hidden) ~ *,
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: none;
+  background: none;
+}
+
+.header-wrapper--padding {
+  padding: 1rem
+}
+
+.header--rounded {
+  border-radius: 1rem;
 }
 
 .header-wrapper--border-bottom {
