@@ -897,7 +897,6 @@ summary::-webkit-details-marker {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
   padding: 0;
   list-style: none;
   column-gap: var(--grid-mobile-horizontal-spacing);
@@ -911,7 +910,10 @@ summary::-webkit-details-marker {
   }
 }
 
-.grid:last-child {
+.grid__item {
+  margin-bottom: 1.5rem;
+}
+.grid__item:last-child {
   margin-bottom: 0;
 }
 
@@ -3353,7 +3355,7 @@ details-disclosure > details {
 
 /* Element Hovers: Vertical Lift, 3d Lift */
 
-@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+@media (prefers-reduced-motion: no-preference) {
   .animate--hover-3d-lift .card-wrapper .card--card,
   .animate--hover-3d-lift .card-wrapper .card--standard .card__inner,
   .animate--hover-3d-lift .button:not(.button--tertiary),
