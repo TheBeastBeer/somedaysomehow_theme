@@ -84,26 +84,6 @@ function percentageSeen(element) {
   } else {
     return percentage;
   }
-
-  /* Old function, by Shopify
-   * const viewportHeight = window.innerHeight;
-   * const scrollY = window.scrollY;
-   * const elementPositionY = element.getBoundingClientRect().top + scrollY;
-   * const elementHeight = element.offsetHeight;
-   * 
-   * if ((elementPositionY > scrollY + viewportHeight) || scrollY === 0) {
-   *   // If we haven't reached the image yet, or we have but are at the top of the page
-   *   return 0;
-   * } else if (elementPositionY + elementHeight < scrollY) {
-   *   // If we've completely scrolled past the image
-   *   return 100;
-   * }
-   * 
-   * // When the image is in the viewport
-   * const distance = scrollY + viewportHeight - elementPositionY;
-   * let percentage = distance / ((viewportHeight + elementHeight) / 100);
-   * return Math.round(percentage);
-   */
 }
 
 // Trigger hover animation, by adding class `hovering`
@@ -112,24 +92,35 @@ function triggerHoverAnimationOnScroll() {
 
   //if(window.matchMedia("(hover: none)").matches) {
 
-    const animationTriggerElements = Array.from(document.getElementsByClassName('card-wrapper'));
+  const animationTriggerElements = Array.from(document.getElementsByClassName('card-wrapper'));
 
-    if (animationTriggerElements.length === 0) return;
+  if (animationTriggerElements.length === 0) return;
 
     animationTriggerElements.forEach((element) => {
-      let elementVisibleRatio = 0;
+      let elementIsVisible = false;
+      let isHovering = false;
       const observer = new IntersectionObserver((elements) => {
         elements.forEach((entry) => {
-          elementVisibleRatio = entry.intersectionRatio;
+          elementIsVisible = entry.isIntersecting;
         });
       });
       observer.observe(element);
 
-      if (elementVisibleRatio > 0.6) {
-        element.classList.add('hovering');
-      } else if (elementVisibleRatio < 0.3) {
-        element.classList.remove('hovering');
-      }
+      window.addEventListener(
+        'scroll',
+        throttle(() => {
+          if (!elementIsVisible) { 
+            return;
+          } else if (percentageSeen(element) > 0.6 ) {
+            element.classList.add('hovering');
+            isHovering = true;
+          } else if (percentageSeen(element) < 0.4 && isHovering) {
+            element.classList.remove('hoverin');
+            isHovering = false;
+          }
+        }),
+        { passive: true }
+      );
     });
   //}
 }
