@@ -1,7 +1,6 @@
 {
   "name": "t:sections.header.name",
   "type": "header",
-  "wrapper": "div#header-group-wrapper",
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
