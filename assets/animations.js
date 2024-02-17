@@ -101,7 +101,7 @@ function triggerHoverAnimationOnScroll() {
       let isHovering = false;
       const observer = new IntersectionObserver((elements) => {
         elements.forEach((entry) => {
-          elementIsVisible = entry.intersectionRatio;
+          elementIsVisible = entry.isIntersecting;
         });
       });
       observer.observe(element);
@@ -109,16 +109,17 @@ function triggerHoverAnimationOnScroll() {
       window.addEventListener(
         'scroll',
         throttle(() => {
-          if (!elementIsVisible) { 
-            return;
-          /*} else if (elementIsVisible > 0.6 ) {
-            element.classList.add('hovering');
-            isHovering = true;
-          } else if (elementIsVisible < 0.4 && isHovering) {
-            element.classList.remove('hovering');
-            isHovering = false;*/
+          if (!elementIsVisible) return;
+          
+          let visibleAmount = 1 - ((element.getBoundingClientRect().bottom - window.innerHeight) / element.getBoundingClientRect().height);
+          
+          if (visibleAmount <= 0.0) {
+            element.style.setProperty('--visibleAmount', '0');
+          } else if (visibleAmount >= 1.0) {
+            element.style.setProperty('--visibleAmount', '1');
+          } else {
+            element.style.setProperty('--visibleAmount', visibleAmount.toString());
           }
-          element.style.setProperty('--visibleRatio', elementIsVisible);
         }),
         { passive: true }
       );
