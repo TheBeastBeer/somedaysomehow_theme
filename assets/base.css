@@ -3367,6 +3367,8 @@ details-disclosure > details {
 
   .animate--hover-3d-lift .card-wrapper:hover .card--card,
   .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__inner,
+  .animate--hover-3d-lift .card-wrapper.hovering .card--card,
+  .animate--hover-3d-lift .card-wrapper.hovering .card--standard .card__inner,
   .animate--hover-3d-lift .button:not(.button--tertiary):not([disabled]):hover,
   .animate--hover-3d-lift .shopify-challenge__button:not([disabled]):hover,
   .animate--hover-3d-lift .customer button:not([disabled]):hover,

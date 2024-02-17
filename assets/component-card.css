@@ -137,8 +137,14 @@
   container-type: inline-size;
 }
 
+.card__content.feature-card > .card__information {
+  display: grid;
+  grid-row-start: 1;
+  justify-items: center;
+}
+
 .card__content.feature-card > .card__information > h3 {
-  font-size: 6cqw;
+  font-size: 7cqw;
 }
 
 .card__content--auto-margins {

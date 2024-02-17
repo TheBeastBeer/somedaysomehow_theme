@@ -106,9 +106,38 @@ function percentageSeen(element) {
    */
 }
 
+// Trigger hover animation, by adding class `hovering`
+function triggerHoverAnimationOnScroll() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  if(window.matchMedia("(hover: none)").matches) {
+
+    const animationTriggerElements = Array.from(document.getElementsByClassName('card-wrapper'));
+
+    if (animationTriggerElements.length === 0) return;
+
+    animationTriggerElements.forEach((element) => {
+      let elementVisibleRatio = 0;
+      const observer = new IntersectionObserver((elements) => {
+        elements.forEach((entry) => {
+          elementVisibleRatio = entry.intersectionRatio;
+        });
+      });
+      observer.observe(element);
+
+      if (elementVisibleRatio > 0.6) {
+        element.classList.add('hovering');
+      } else if (elementVisibleRatio < 0.3) {
+        element.classList.remove('hovering');
+      }
+    });
+  }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   initializeScrollAnimationTrigger();
   initializeScrollZoomAnimationTrigger();
+  triggerHoverAnimationOnScroll();
 });
 
 if (Shopify.designMode) {
