@@ -7,13 +7,13 @@
   place-items: center;
 }
 
-.banner__media.banner--stacked > img {
+#second-image.banner--stacked > img {
   height: auto;
   position: relative;
   max-width: min(95vw, calc(var(--max-banner-height) * 0.66));
 }
 
-.banner__media:not(.banner--stacked) > img {
+#first-image:not(.banner--stacked) > img {
   object-position: 75% 50%;
 }
 
