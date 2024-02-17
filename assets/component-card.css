@@ -134,6 +134,7 @@
   justify-content: center;
   align-content: flex-start;
   flex-wrap: wrap;
+  container-type: inline-size;
 }
 
 .card__content.feature-card > .card__information > h3 {
