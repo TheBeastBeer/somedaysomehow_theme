@@ -117,7 +117,7 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "Who?",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -126,7 +126,7 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "What?",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -135,7 +135,7 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "How?",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
