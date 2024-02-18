@@ -166,13 +166,6 @@
   color: rgba(var(--color-foreground), 0.75);
 }
 
-@media screen and (min-width: 750px) {
-  .card__information {
-    padding-bottom: 1.7rem;
-    padding-top: 1.7rem;
-  }
-}
-
 .card__badge {
   align-self: flex-end;
   grid-row-start: 3;
