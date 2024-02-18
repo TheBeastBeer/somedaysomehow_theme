@@ -911,13 +911,6 @@ summary::-webkit-details-marker {
 }
 
 .grid__item {
-  margin-bottom: 1.5rem;
-}
-.grid__item:last-child {
-  margin-bottom: 0;
-}
-
-.grid__item {
   width: calc(25% - var(--grid-mobile-horizontal-spacing) * 3 / 4);
   max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
   flex-grow: 1;
