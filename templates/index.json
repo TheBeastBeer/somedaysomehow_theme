@@ -25,7 +25,7 @@
     "image_banner_rCURfE": {
       "type": "image-banner",
       "custom_css": [
-        "div:has(> img) {background-color: var(--color-background); height: 5rem; margin: 10px;}",
+        "div {background-color: var(--color-background); height: 5rem; margin: 10px;}",
         "div > img {object-fit: contain; object-position: center;}"
       ],
       "settings": {
@@ -63,7 +63,7 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 20,
         "padding_bottom": 0
       }
     },
