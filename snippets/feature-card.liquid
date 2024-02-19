@@ -26,7 +26,7 @@
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign card_media = card_product.metafields.homepage.card.value.image.value
-    assign ratio = card_media.aspect_ratio 
+    assign ratio = card_media.aspect_ratio
   -%}
   <div class="card-wrapper product-card-wrapper">
     <div
@@ -98,6 +98,13 @@
                 class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
               >
                 {{- 'products.product.sold_out' | t -}}
+              </span>
+            {%- elsif card_product.metafields.preorder.boolean.value -%}
+              <span
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+              >
+                {{- 'products.product.preorder' | t -}}
               </span>
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               <span
