@@ -123,17 +123,15 @@
 
 .card__content {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
+  grid-template-rows: max-content max-content auto;
   padding: 1rem;
   width: 100%;
   flex-grow: 1;
 }
 
 .card__content.feature-card {
-  display: flex;
   justify-content: center;
   align-content: flex-start;
-  flex-wrap: wrap;
   container-type: inline-size;
 }
 
@@ -167,9 +165,10 @@
 }
 
 .card__badge {
-  align-self: flex-end;
-  grid-row-start: 3;
-  justify-self: flex-start;
+  display: flex;
+  align-self: center;
+  grid-row-start: 2;
+  justify-self: center;
   line-height: normal;
 }
 
