@@ -40,16 +40,30 @@
     assign ratio = card_media.aspect_ratio
   -%}
   <div class="card-wrapper product-card-wrapper">
+    {%- liquid
+      if card_media
+        assign card-classes = 'card--media'
+      else
+        assign card-classes = 'card--text'
+      endif
+      if settings.card_style == 'card'
+        assign card-classes = card-classes | append: ' color-' | append: settings.card_color_scheme | append: ' gradient'
+      endif
+      if image_shape and image_shape != 'default'
+        assign card-classes = card-classes | append: ' card--shape'
+      endif
+      if extend_height
+        assign card-classes = card-classes | append: ' card--extend-height'
+      endif
+      if card_media == null and settings.card_style == 'card'
+        assign card-classes = card-classes | append: ' ratio'
+      endif
+      if horizontal_class
+        assign card-classes = card-classes | append: ' card--horizontal'
+      endif
+    -%}
     <div
-      class="
-        card card--{{ settings.card_style }}
-        {% if card_media %} card--media{% else %} card--text{% endif %}
-        {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
-        {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
-        {% if extend_height %} card--extend-height{% endif %}
-        {% if card_media == nil and settings.card_style == 'card' %} ratio{% endif %}
-        {% if horizontal_class %} card--horizontal{% endif %}
-      "
+      class="card card--{{ settings.card_style }} {{ card-classes }}"
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
