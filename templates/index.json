@@ -25,7 +25,7 @@
     "image_banner_rCURfE": {
       "type": "image-banner",
       "custom_css": [
-        "div {background-color: var(--color-background); height: 5rem; margin: 1rem;}",
+        "div.banner__media {background-color: var(--color-background); height: 5rem; margin-top: 10px; margin-bottom: 20px;}",
         "div > img {object-fit: contain; object-position: center;}"
       ],
       "settings": {
@@ -63,7 +63,7 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 20,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -91,8 +91,8 @@
         "enable_quick_add": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 12,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     },
     "multicolumn": {
@@ -144,8 +144,8 @@
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     }
   },
