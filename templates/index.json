@@ -2,44 +2,13 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
+      "custom_css": [
+        ".banner__media:last-child.banner--stacked > img {height: auto; position: relative; max-width: min(95vw, calc(var(--max-banner-height) * 0.66));}",
+        ".banner__media:first-child:not(.banner--stacked) > img {object-position: 75% 50%;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Cloud_background_large_3f06e9af-3fa0-4ecd-bd5f-9ab4fc53d611.webp",
-        "image_2": "shopify:\/\/shop_images\/Logo_hero_Someday_Somehow_gluten_free.webp",
+        "image_2": "shopify:\/\/shop_images\/Logo_only_Someday_Somehow_gluten_free.png",
         "stack_images": true,
         "image_overlay_opacity": 0,
         "image_height": "large",
@@ -53,33 +22,48 @@
         "show_text_below": false
       }
     },
+    "image_banner_rCURfE": {
+      "type": "image-banner",
+      "custom_css": [
+        "div {background-color: var(--color-background); height: 4rem; margin: 1rem;}",
+        "div > img {object-fit: contain; object-position: center;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Byline_gluten_free_beer_for_dreamers.png",
+        "stack_images": false,
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "animate_second_image": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "caption_DRErUF": {
+          "type": "caption",
           "settings": {
-            "heading": "Gluten free beer for dreamers",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": ""
+            "caption": "Check out these wonders...",
+            "text_style": "subtitle",
+            "text_size": "medium"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "caption_DRErUF"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -167,6 +151,7 @@
   },
   "order": [
     "image_banner",
+    "image_banner_rCURfE",
     "rich_text",
     "featured_collection",
     "multicolumn"
