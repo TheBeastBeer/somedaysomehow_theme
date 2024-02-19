@@ -25,7 +25,7 @@
     "image_banner_rCURfE": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {background-color: var(--color-background); height: 5rem; margin-top: 10px; margin-bottom: 20px;}",
+        "div:has(> img) {background-color: var(--color-background); height: 5rem; margin: 10px;}",
         "div > img {object-fit: contain; object-position: center;}"
       ],
       "settings": {
