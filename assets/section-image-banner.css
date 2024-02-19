@@ -7,16 +7,6 @@
   place-items: center;
 }
 
-#SecondImage.banner--stacked > img {
-  height: auto;
-  position: relative;
-  max-width: min(95vw, calc(var(--max-banner-height) * 0.66));
-}
-
-#FirstImage:not(.banner--stacked) > img {
-  object-position: 75% 50%;
-}
-
 .banner {
   display: flex;
   position: relative;
