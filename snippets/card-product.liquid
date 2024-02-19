@@ -105,7 +105,7 @@
                     assign card_title = card_product.title
                   endif
                 -%}
-                {{ card_title | escape }}
+                {{ card_title | escape | strip }}
               </a>
             </h3>
           </div>
