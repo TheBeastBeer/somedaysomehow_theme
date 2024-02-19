@@ -3,7 +3,7 @@
     "image_banner": {
       "type": "image-banner",
       "custom_css": [
-        ".banner__media:last-child.banner--stacked > img {height: auto; position: relative; max-width: min(95vw, calc(var(--max-banner-height) * 0.66));}",
+        ".banner__media:nth-child(2).banner--stacked > img {height: auto; position: relative; max-width: min(95vw, calc(var(--max-banner-height) * 0.66));}",
         ".banner__media:first-child:not(.banner--stacked) > img {object-position: 75% 50%;}"
       ],
       "settings": {
