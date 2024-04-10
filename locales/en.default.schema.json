@@ -1479,6 +1479,16 @@
         "name": "Image with text"
       }
     },
+    "image-with-link": {
+      "name": "Image with link",
+      "settings": {
+        "image_link": {
+          "label": "First image link"
+        },
+        "image_2_link": {
+          "label": "Second image link"
+        }
+    },
     "multirow": {
       "name": "Multirow",
       "settings": {
