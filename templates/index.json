@@ -25,7 +25,8 @@
     "image_banner_rCURfE": {
       "type": "image-banner",
       "custom_css": [
-
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none;}",
+        "div.banner__media img {width: auto;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Beyond_beer_background.svg",
@@ -33,13 +34,13 @@
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "",
         "animate_second_image": false,
         "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "featured_collection": {
