@@ -6,6 +6,10 @@
   --header-height: 64px;
 }
 
+.static {
+  position: static !important;
+}
+
 #MainContent {
   transform: translateY(calc(var(--header-height) * -1));
   transition-property: transform;
@@ -1128,7 +1132,7 @@ summary::-webkit-details-marker {
   background-color: transparent;
 }
 
-.media > *:not(.zoom):not(.deferred-media__poster-button),
+.media > *:not(.zoom):not(.deferred-media__poster-button):not(.background-media),
 .media model-viewer {
   display: block;
   max-width: 100%;

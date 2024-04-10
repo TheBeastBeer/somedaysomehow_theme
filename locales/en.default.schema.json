@@ -1163,6 +1163,9 @@
         "image": {
           "label": "First image"
         },
+        "background_image": {
+          "label": "Background image"
+        },
         "image_2": {
           "label": "Second image"
         },
