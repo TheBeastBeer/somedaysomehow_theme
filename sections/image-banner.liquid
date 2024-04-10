@@ -32,6 +32,7 @@
 {%- liquid
   assign full_width = '100vw'
   assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+  assign default_size_1 = ''
 
   if section.settings.image_behavior == 'ambient'
     assign full_width = '120vw'
@@ -41,6 +42,12 @@
   if section.index == 1
     assign fetch_priority = 'high'
   endif
+  if section.settings.default_size_1
+    assign default_size_1 = 'default-size'
+  endif
+  if section.settings.default_size_2
+    assign default_size_2 = 'default-size'
+  endif
 -%}
 
 <div
@@ -49,7 +56,7 @@
 >
   {%- if section.settings.image != blank -%}
     {% comment %}TODO: Add section settings and css variables for `object-position` background focal point (on mobile?){% endcomment %}
-    <div class="banner__media media{% if section.settings.background_image %} background-media{% endif %}{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {%- assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio -%}
       {{
         section.settings.image
@@ -59,17 +66,18 @@
           height: image_height,
           sizes: full_width,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: fetch_priority,
+          class: default_size_1
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
-    <div class="banner__media media{% if section.settings.background_image %} background-media{% endif %}{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
     {% comment %}TODO: Add section settings and css variables for second image size{% endcomment %}
-    <div class="banner__media media{% if section.settings.background_image %} background-media{% endif %}{% if section.settings.image_behavior != 'none' and section.settings.animate_second_image %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}{% if section.settings.stack_images %} banner--stacked{% endif %}">
+    <div class="banner__media media{% if section.settings.image_behavior != 'none' and section.settings.animate_second_image %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}{% if section.settings.stack_images %} banner--stacked{% endif %}">
       {%- assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio -%}
       {{
         section.settings.image_2
@@ -79,7 +87,8 @@
           height: image_height_2,
           sizes: full_width,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: fetch_priority,
+          class: default_size_2
       }}
     </div>
   {%- endif -%}
@@ -152,13 +161,20 @@
     },
     {
       "type": "checkbox",
-      "id": "background_image",
-      "label": "t:sections.image-banner.settings.background-image.label"
+      "id": "default_size_1",
+      "default": true,
+      "label": "t:sections.image-banner.settings.default_size_1.label"
     },
     {
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "default_size_2",
+      "default": true,
+      "label": "t:sections.image-banner.settings.default_size_2.label"
     },
     {
       "type": "checkbox",

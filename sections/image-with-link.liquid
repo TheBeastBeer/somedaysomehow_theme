@@ -41,6 +41,12 @@
   if section.index == 1
     assign fetch_priority = 'high'
   endif
+  if section.settings.default_size_1
+    assign default_size_1 = 'default-size'
+  endif
+  if section.settings.default_size_2
+    assign default_size_2 = 'default-size'
+  endif
 -%}
 
 <div
@@ -68,7 +74,8 @@
           height: image_height,
           sizes: full_width,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: fetch_priority,
+          class: default_size_1
       }}
       {%- if section.settings.image_link != blank -%}
         </a>
@@ -100,7 +107,8 @@
           height: image_height_2,
           sizes: full_width,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: fetch_priority,
+          class: default_size_2
       }}
       {%- if section.settings.image_2_link != blank -%}
         </a>
@@ -175,6 +183,12 @@
       "label": "t:sections.image-banner.settings.image.label"
     },
     {
+      "type": "checkbox",
+      "id": "default_size_1",
+      "default": true,
+      "label": "t:sections.image-banner.settings.default_size_1.label"
+    },
+    {
       "type": "url",
       "id": "image_link",
       "label": "t:sections.image-with-link.settings.image_link.label"
@@ -183,6 +197,12 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "default_size_2",
+      "default": true,
+      "label": "t:sections.image-banner.settings.default_size_2.label"
     },
     {
       "type": "url",

@@ -1163,11 +1163,14 @@
         "image": {
           "label": "First image"
         },
-        "background_image": {
-          "label": "Background image"
+        "default_size_1": {
+          "label": "Set to default size"
         },
         "image_2": {
           "label": "Second image"
+        },
+        "default_size_2": {
+          "label": "Set to default size"
         },
         "image_overlay_opacity": {
           "label": "Image overlay opacity"
