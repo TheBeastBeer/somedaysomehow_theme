@@ -102,7 +102,7 @@
     "image_with_link_6ByQLA": {
       "type": "image-with-link",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}",
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding: 1em 0;}",
         "div.banner__media a,div.banner__media img {width: auto; position: static;}"
       ],
       "settings": {
@@ -147,10 +147,33 @@
         "show_text_below": false
       }
     },
+    "image_with_link_qLxybG": {
+      "type": "image-with-link",
+      "custom_css": [
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding: 1em 0;}",
+        "div.banner__media a,div.banner__media img {width: auto; position: static;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Where_to_find_us_heading.svg",
+        "image_link": "shopify:\/\/pages\/contact",
+        "image_2_link": "",
+        "stack_images": false,
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "animate_second_image": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "image_banner_mYq6qF": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position:static;}",
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}",
         "div.banner__media img {width: auto; position: static;}"
       ],
       "settings": {
@@ -178,6 +201,7 @@
     "image_banner_qtJUwM",
     "image_with_link_6ByQLA",
     "image_banner_cfeJPf",
+    "image_with_link_qLxybG",
     "image_banner_mYq6qF"
   ]
 }
