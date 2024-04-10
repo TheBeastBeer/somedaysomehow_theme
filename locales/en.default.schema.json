@@ -1493,10 +1493,10 @@
         },
         "image_2_link": {
           "label": "Second image link"
-        },
-        "presets": {
-          "name": "Image with link"
         }
+      },
+      "presets": {
+        "name": "Image with link"
       }
     },
     "multirow": {

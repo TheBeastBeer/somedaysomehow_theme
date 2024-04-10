@@ -1128,7 +1128,7 @@ summary::-webkit-details-marker {
   background-color: transparent;
 }
 
-.media > *:not(.zoom):not(.deferred-media__poster-button):not(.default-size),
+.media > *:not(.zoom):not(.deferred-media__poster-button):not(.default-size):not(a:has(img)),
 .media model-viewer {
   display: block;
   max-width: 100%;
