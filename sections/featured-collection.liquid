@@ -48,8 +48,54 @@
   endif
 -%}
 
+{%- liquid
+  assign full_width = '100vw'
+  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+
+  if section.settings.image_behavior == 'ambient'
+    assign full_width = '120vw'
+    assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+  endif
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+    {%- if section.settings.desktop_background -%}
+      {%- assign desktop_background_height = section.settings.desktop_background.width
+        | divided_by: section.settings.desktop_background.aspect_ratio
+      -%}
+      {{
+        section.settings.desktop_background
+        | image_url: width: 3840
+        | image_tag:
+          width: section.settings.image.width,
+          height: desktop_background_height,
+          sizes: full_width,
+          widths: widths,
+          fetchpriority: fetch_priority,
+          class: 'desktop background'
+      }}
+    {%- endif -%}
+    {%- if section.settings.mobile_background -%}
+      {%- assign mobile_background_height = section.settings.mobile_background.width
+        | divided_by: section.settings.mobile_background.aspect_ratio
+      -%}
+      {{
+        section.settings.mobile_background
+        | image_url: width: 3840
+        | image_tag:
+          width: section.settings.image.width,
+          height: mobile_background_height,
+          sizes: full_width,
+          widths: widths,
+          fetchpriority: fetch_priority,
+          class: 'mobile background'
+      }}
+    {%- endif -%}
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -396,7 +442,21 @@
     },
     {
       "type": "header",
+      "content": "t:sections.featured-collection.settings.desktop.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_background",
+      "label": "t:sections.featured-collection.settings.desktop_background.label"
+    },
+    {
+      "type": "header",
       "content": "t:sections.featured-collection.settings.header_mobile.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background",
+      "label": "t:sections.featured-collection.settings.mobile_background.label"
     },
     {
       "type": "select",

@@ -54,38 +54,6 @@
   id="Banner-{{ section.id }}"
   class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
-  {%- if section.settings.desktop_background -%}
-    {%- assign desktop_background_height = section.settings.desktop_background.width
-      | divided_by: section.settings.desktop_background.aspect_ratio
-    -%}
-    {{
-      section.settings.desktop_background
-      | image_url: width: 3840
-      | image_tag:
-        width: section.settings.image.width,
-        height: desktop_background_height,
-        sizes: full_width,
-        widths: widths,
-        fetchpriority: fetch_priority,
-        class: 'desktop background'
-    }}
-  {%- endif -%}
-  {%- if section.settings['mobile-background'] -%}
-    {%- assign mobile_background_height = section.settings.mobile_background.width
-      | divided_by: section.settings.mobile_background.aspect_ratio
-    -%}
-    {{
-      section.settings.mobile_background
-      | image_url: width: 3840
-      | image_tag:
-        width: section.settings.image.width,
-        height: mobile_background_height,
-        sizes: full_width,
-        widths: widths,
-        fetchpriority: fetch_priority,
-        class: 'mobile background'
-    }}
-  {%- endif -%}
   {%- if section.settings.image != blank -%}
     {% comment %}TODO: Add section settings and css variables for `object-position` background focal point (on mobile?){% endcomment %}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -294,11 +262,6 @@
       "content": "t:sections.image-banner.settings.desktop.content"
     },
     {
-      "type": "image_picker",
-      "id": "desktop_background",
-      "label": "t:sections.image-banner.settings.desktop_background.label"
-    },
-    {
       "type": "select",
       "id": "desktop_content_position",
       "options": [
@@ -371,11 +334,6 @@
     {
       "type": "header",
       "content": "t:sections.image-banner.settings.mobile.content"
-    },
-    {
-      "type": "image_picker",
-      "id": "mobile_background",
-      "label": "t:sections.image-banner.settings.mobile_background.label"
     },
     {
       "type": "select",

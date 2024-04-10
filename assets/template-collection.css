@@ -1,8 +1,15 @@
-@media screen and (max-width: 749px) {
-  .collection .grid__item:only-child {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.background {
+  justify-self: center;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.collection {
+  display: grid;
+}
+
+.collection > * {
+  grid-area: 1 / 1;
 }
 
 @media screen and (max-width: 989px) {
@@ -18,13 +25,25 @@
 }
 
 @media screen and (max-width: 749px) {
+  .collection .grid__item:only-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
   .collection .loading-overlay {
     top: 0;
     right: 0;
   }
+
+  .desktop.background {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 750px) {
+  .mobile.background {
+    display: none;
+  }
+
   .collection .loading-overlay {
     left: 0;
   }
