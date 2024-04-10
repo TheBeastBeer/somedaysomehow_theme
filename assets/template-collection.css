@@ -12,6 +12,10 @@
   grid-area: 1 / 1;
 }
 
+.collection > slider-component {
+  width: 100%;
+}
+
 @media screen and (max-width: 989px) {
   .collection .slider.slider--tablet {
     margin-bottom: 1.5rem;
