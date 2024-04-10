@@ -1491,6 +1491,7 @@
         "presets": {
           "name": "Image with link"
         }
+      }
     },
     "multirow": {
       "name": "Multirow",
