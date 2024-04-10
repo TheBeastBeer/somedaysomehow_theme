@@ -76,15 +76,15 @@
     height: 39rem;
   }
 
-  .banner--small:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+  .banner--small:not(.banner--mobile-bottom):not(.banner--adapt) {
     min-height: 28rem;
   }
 
-  .banner--medium:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+  .banner--medium:not(.banner--mobile-bottom):not(.banner--adapt) {
     min-height: 34rem;
   }
 
-  .banner--large:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+  .banner--large:not(.banner--mobile-bottom):not(.banner--adapt) {
     min-height: var(--max-banner-height);
   }
 }
