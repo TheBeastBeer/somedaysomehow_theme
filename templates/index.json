@@ -95,9 +95,8 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "mobile_background": "shopify:\/\/shop_images\/Beer_cards_background_long.svg",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 0,
         "padding_bottom": 0
       }
