@@ -33,6 +33,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Beyond_beer_background.svg",
+        "default_size_1": true,
+        "default_size_2": true,
         "stack_images": false,
         "image_overlay_opacity": 0,
         "image_height": "small",
@@ -82,6 +84,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/No_boredom_background.svg",
+        "default_size_1": true,
+        "default_size_2": true,
         "stack_images": false,
         "image_overlay_opacity": 0,
         "image_height": "small",
@@ -99,11 +103,13 @@
       "type": "image-with-link",
       "custom_css": [
         "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none;}",
-        "div.banner__media a, div.banner__media img {width: auto; position: static;}"
+        "div.banner__media a,div.banner__media img {width: auto; position: static;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Who_what_how_heading.svg",
+        "default_size_1": true,
         "image_link": "shopify:\/\/pages\/about",
+        "default_size_2": true,
         "image_2_link": "",
         "stack_images": false,
         "image_overlay_opacity": 0,
@@ -126,6 +132,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Squiggle_background.svg",
+        "default_size_1": true,
+        "default_size_2": true,
         "stack_images": false,
         "image_overlay_opacity": 0,
         "image_height": "small",
@@ -147,6 +155,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Gluten_free_beer_for_dreamers_background.svg",
+        "default_size_1": true,
+        "default_size_2": true,
         "stack_images": false,
         "image_overlay_opacity": 0,
         "image_height": "small",
