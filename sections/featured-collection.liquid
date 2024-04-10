@@ -23,7 +23,7 @@
   {%- if section.settings.mobile_background -%}
     @media screen and (max-width: 989px) {
     .section-{{ section.id }}-padding {
-      background: url({{ section.settings.mobile_background }});
+      background: url({{ section.settings.mobile_background | image_url: width: section.settings.mobile_background.width }});
       background-size: cover;
     }
 
@@ -37,7 +37,7 @@
   {%- if section.settings.desktop_background -%}
     @media screen and (min-width: 990px) {
     .section-{{ section.id }}-padding {
-      background: url({{ section.settings.desktop_background | asset_img_url  }});
+      background: url({{ section.settings.desktop_background | image_url: width: section.settings.desktop_background.width  }});
       background-size: cover;
     }
   }
