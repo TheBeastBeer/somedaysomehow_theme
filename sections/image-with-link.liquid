@@ -1,28 +1,5 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
-{%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
-  {%- style -%}
-    @media screen and (max-width: 749px) {
-      #Banner-{{ section.id }}::before,
-      #Banner-{{ section.id }} .banner__media::before,
-      #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
-    }
-
-    @media screen and (min-width: 750px) {
-      #Banner-{{ section.id }}::before,
-      #Banner-{{ section.id }} .banner__media::before {
-        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
-    }
-  {%- endstyle -%}
-{%- endif -%}
-
 {%- style -%}
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
@@ -57,13 +34,7 @@
     {% comment %}TODO: Add section settings and css variables for `object-position` background focal point (on mobile?){% endcomment %}
     <div class="banner__media media{% if section.settings.background_image %} background-media{% endif %}{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {%- if section.settings.image_link != blank -%}
-        <a
-          {% if section.settings.image_link == blank %}
-            role="link" aria-disabled="true"
-          {% else %}
-            href="{{ section.settings.image_link }}"
-          {% endif %}
-        >
+        <a href="{{ section.settings.image_link }}">
       {%- endif -%}
       {%- assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio -%}
       {{
@@ -90,13 +61,7 @@
     {% comment %}TODO: Add section settings and css variables for second image size{% endcomment %}
     <div class="banner__media media{% if section.settings.background_image %} background-media{% endif %}{% if section.settings.image_behavior != 'none' and section.settings.animate_second_image %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}{% if section.settings.stack_images %} banner--stacked{% endif %}">
       {%- if section.settings.image_2_link != blank -%}
-        <a
-          {% if section.settings.image_2_link == blank %}
-            role="link" aria-disabled="true"
-          {% else %}
-            href="{{ section.settings.image_2_link }}"
-          {% endif %}
-        >
+        <a href="{{ section.settings.image_2_link }}">
       {%- endif -%}
       {%- assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio -%}
       {{
