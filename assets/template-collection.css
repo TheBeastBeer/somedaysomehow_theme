@@ -1,7 +1,8 @@
 .background {
   justify-self: center;
-  object-fit: cover;
+  max-width: 100%;
   object-position: center center;
+  padding-top: 1em;
 }
 
 .collection {
