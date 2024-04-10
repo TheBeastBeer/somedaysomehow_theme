@@ -4,7 +4,8 @@
       "type": "image-banner",
       "custom_css": [
         ".banner__media:nth-child(2).banner--stacked > img {height: auto; position: relative; max-width: min(95vw, calc(var(--max-banner-height) * 0.66));}",
-        ".banner__media:first-child:not(.banner--stacked) > img {object-position: 75% 50%;}"
+        ".banner__media:first-child:not(.banner--stacked) > img {object-position: 75% 50%;}",
+        ".banner {margin-bottom: 1em;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Cloud_background_large_3f06e9af-3fa0-4ecd-bd5f-9ab4fc53d611.webp",
@@ -91,12 +92,56 @@
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
+    },
+    "image_banner_cfeJPf": {
+      "type": "image-banner",
+      "custom_css": [
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none;}",
+        "div.banner__media img {width: auto; position: static;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Squiggle_background.svg",
+        "stack_images": false,
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "animate_second_image": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "image_banner_mYq6qF": {
+      "type": "image-banner",
+      "custom_css": [
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none;}",
+        "div.banner__media img {width: auto; position: static;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Gluten_free_beer_for_dreamers_background.svg",
+        "stack_images": false,
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "animate_second_image": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
     }
   },
   "order": [
     "image_banner",
     "image_banner_rCURfE",
     "featured_collection",
-    "image_banner_qtJUwM"
+    "image_banner_qtJUwM",
+    "image_banner_cfeJPf",
+    "image_banner_mYq6qF"
   ]
 }
