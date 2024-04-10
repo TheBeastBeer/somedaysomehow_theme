@@ -38,17 +38,9 @@
     top: 0;
     right: 0;
   }
-
-  .desktop.background {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 750px) {
-  .mobile.background {
-    display: none;
-  }
-
   .collection .loading-overlay {
     left: 0;
   }
@@ -82,6 +74,10 @@
 }
 
 @media screen and (max-width: 989px) {
+
+  .desktop.background {
+    display: none;
+  }
   .collection .slider--tablet.product-grid {
     scroll-padding-left: 1.5rem;
   }
@@ -100,6 +96,10 @@
 }
 
 @media screen and (min-width: 990px) {
+  .mobile.background {
+    display: none;
+  }
+
   .collection__title--desktop-slider .title {
     margin-bottom: 2.5rem;
   }
