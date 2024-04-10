@@ -24,7 +24,9 @@
     @media screen and (max-width: 989px) {
     .section-{{ section.id }}-padding {
       background: url({{ section.settings.mobile_background | image_url: width: section.settings.mobile_background.width }});
-      background-size: cover;
+      background-size: contain;
+      background-position-x: center;
+      background-repeat: no-repeat;
     }
 
     @media screen and (max-width: 475px) {
@@ -38,7 +40,9 @@
     @media screen and (min-width: 990px) {
     .section-{{ section.id }}-padding {
       background: url({{ section.settings.desktop_background | image_url: width: section.settings.desktop_background.width  }});
-      background-size: cover;
+      background-size: contain;
+      background-position-x: center;
+      background-repeat: no-repeat;
     }
   }
   {%- endif -%}
