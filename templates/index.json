@@ -103,7 +103,7 @@
     "image_banner_qtJUwM": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding-top: 0.75em;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/No_boredom_background.svg",
