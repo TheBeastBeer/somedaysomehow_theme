@@ -20,6 +20,29 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  {%- if section.settings.mobile_background -%}
+    @media screen and (max-width: 989px) {
+    .section-{{ section.id }}-padding {
+      background: url({{ section.settings.mobile_background | asset_img_url  }});
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 475px) {
+    .section-{{ section.id }}-padding {
+      background-size: 100% 100%;
+    }
+  }
+  {%- endif -%}
+
+  {%- if section.settings.desktop_background -%}
+    @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+      background: url({{ section.settings.desktop_background | asset_img_url  }});
+      background-size: cover;
+    }
+  }
+  {%- endif -%}
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -64,38 +87,6 @@
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
-    {%- if section.settings.desktop_background -%}
-      {%- assign desktop_background_height = section.settings.desktop_background.width
-        | divided_by: section.settings.desktop_background.aspect_ratio
-      -%}
-      {{
-        section.settings.desktop_background
-        | image_url: width: 3840
-        | image_tag:
-          width: section.settings.image.width,
-          height: desktop_background_height,
-          sizes: full_width,
-          widths: widths,
-          fetchpriority: fetch_priority,
-          class: 'desktop background'
-      }}
-    {%- endif -%}
-    {%- if section.settings.mobile_background -%}
-      {%- assign mobile_background_height = section.settings.mobile_background.width
-        | divided_by: section.settings.mobile_background.aspect_ratio
-      -%}
-      {{
-        section.settings.mobile_background
-        | image_url: width: 3840
-        | image_tag:
-          width: section.settings.image.width,
-          height: mobile_background_height,
-          sizes: full_width,
-          widths: widths,
-          fetchpriority: fetch_priority,
-          class: 'mobile background'
-      }}
-    {%- endif -%}
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
