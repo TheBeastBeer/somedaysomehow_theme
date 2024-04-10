@@ -28,8 +28,7 @@
     "image_banner_rCURfE": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}",
-        "div.banner__media img {width: auto; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Beyond_beer_background.svg",
