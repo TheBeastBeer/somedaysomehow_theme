@@ -67,7 +67,7 @@
     "blog_card_shadow_vertical_offset": 4,
     "blog_card_shadow_blur": 5,
     "text_boxes_border_thickness": 0,
-    "text_boxes_border_opacity": 10,
+    "text_boxes_border_opacity": 0,
     "text_boxes_radius": 0,
     "text_boxes_shadow_opacity": 0,
     "text_boxes_shadow_horizontal_offset": 0,
@@ -136,11 +136,11 @@
         "settings": {
           "background": "#000000",
           "background_gradient": "",
-          "text": "#fff",
-          "button": "#fff",
+          "text": "#ffffff",
+          "button": "#ffffff",
           "button_label": "#000000",
-          "secondary_button_label": "#fff",
-          "shadow": "#fff"
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ffffff"
         }
       },
       "scheme-2": {
