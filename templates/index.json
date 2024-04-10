@@ -155,7 +155,9 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Where_to_find_us_heading.svg",
+        "default_size_1": true,
         "image_link": "shopify:\/\/pages\/contact",
+        "default_size_2": true,
         "image_2_link": "",
         "stack_images": false,
         "image_overlay_opacity": 0,
