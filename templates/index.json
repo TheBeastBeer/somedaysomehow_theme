@@ -48,6 +48,31 @@
         "show_text_below": false
       }
     },
+    "image_with_link_UqE7X7": {
+      "type": "image-with-link",
+      "custom_css": [
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding-top: 1em;}",
+        "div.banner__media a,div.banner__media img {width: auto; position: static;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/New_releases_heading.svg",
+        "default_size_1": true,
+        "image_link": "",
+        "default_size_2": true,
+        "image_2_link": "",
+        "stack_images": false,
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "animate_second_image": false,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -199,6 +224,7 @@
   "order": [
     "image_banner",
     "image_banner_rCURfE",
+    "image_with_link_UqE7X7",
     "featured_collection",
     "image_banner_qtJUwM",
     "image_with_link_6ByQLA",
