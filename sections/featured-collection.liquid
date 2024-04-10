@@ -23,7 +23,7 @@
   {%- if section.settings.mobile_background -%}
     @media screen and (max-width: 989px) {
     .section-{{ section.id }}-padding {
-      background: url({{ section.settings.mobile_background | asset_img_url  }});
+      background: url({{ section.settings.mobile_background }});
       background-size: cover;
     }
 
