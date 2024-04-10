@@ -50,8 +50,7 @@
     "image_with_link_UqE7X7": {
       "type": "image-with-link",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding-top: 1em;}",
-        "div.banner__media a,div.banner__media img {width: auto; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding-top: 0.75em;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/New_releases_heading.svg",
@@ -104,8 +103,7 @@
     "image_banner_qtJUwM": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}",
-        "div.banner__media img {width: auto; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/No_boredom_background.svg",
@@ -127,8 +125,7 @@
     "image_with_link_6ByQLA": {
       "type": "image-with-link",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding: 1em 0;}",
-        "div.banner__media a,div.banner__media img {width: auto; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding: 0.75em 0;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Who_what_how_heading.svg",
@@ -152,8 +149,7 @@
     "image_banner_cfeJPf": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}",
-        "div.banner__media img {width: auto; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Squiggle_background.svg",
@@ -175,8 +171,7 @@
     "image_with_link_qLxybG": {
       "type": "image-with-link",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding: 1em 0;}",
-        "div.banner__media a,div.banner__media img {width: auto; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding: 0.75em 0;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Where_to_find_us_heading.svg",
@@ -200,8 +195,7 @@
     "image_banner_mYq6qF": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}",
-        "div.banner__media img {width: auto; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Gluten_free_beer_for_dreamers_background.svg",
