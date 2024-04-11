@@ -154,12 +154,15 @@
               {%- endif -%}
             </div>
           {%- when 'polaroids' -%}
-            <div
-              class="banner__polaroids media scroll-trigger animate--slide-in"
-              data-cascade
-              style="--animation-order: {{ forloop.index | times: 2 }};"
-              {{ block.shopify_attributes }}
-            >
+            {%- comment -%}
+              TODO: Implement animation on a more granular level.
+
+              <div
+                class="banner__polaroids media scroll-trigger animate--slide-in"
+                data-cascade
+                style="--animation-order: {{ forloop.index | times: 2 }};"
+            {%- endcomment -%}
+            <div class="banner__polaroids media" {{ block.shopify_attributes }}>
               {%- if block.settings.image != blank -%}
                 {%- assign polaroid_height = block.settings.image.width
                   | divided_by: block.settings.image.aspect_ratio
