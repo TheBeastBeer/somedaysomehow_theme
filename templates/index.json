@@ -172,7 +172,7 @@
         "color_scheme": "",
         "animate_second_image": false,
         "image_behavior": "none",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "top-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
