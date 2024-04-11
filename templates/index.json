@@ -148,17 +148,6 @@
     },
     "image_banner_cfeJPf": {
       "type": "image-banner",
-      "blocks": {
-        "polaroids_FKcRNX": {
-          "type": "polaroids",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Purple_ginger_beer_gluten_free_create.webp"
-          }
-        }
-      },
-      "block_order": [
-        "polaroids_FKcRNX"
-      ],
       "custom_css": [
         "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}"
       ],
