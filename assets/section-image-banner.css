@@ -385,6 +385,9 @@
   width: 100%;
   word-wrap: break-word;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 @media screen and (min-width: 750px) {
