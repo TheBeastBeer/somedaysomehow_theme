@@ -138,6 +138,17 @@
                   </a>
                 {%- endif -%}
               </div>
+            {%- when 'polaroids' -%}
+              <div class="banner__polaroids" {{ block.shopify_attributes }}>
+                {%- assign polaroid_height = block.settings.image.width
+                  | divided_by: block.settings.image.aspect_ratio
+                -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 500
+                  | image_tag: width: block.settings.image.width, height: polaroid_height
+                }}
+              </div>
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -469,6 +480,18 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    },
+    {
+      "type": "polaroids",
+      "name": "t:sections.image-banner.blocks.polaroids.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.image-banner.blocks.polaroids.settings.image.label"
         }
       ]
     }
