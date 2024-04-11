@@ -154,10 +154,24 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Purple_ginger_beer_gluten_free_create.webp"
           }
+        },
+        "polaroids_HrY6tT": {
+          "type": "polaroids",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mash_brewing_gluten_free.webp"
+          }
+        },
+        "polaroids_TmdJTk": {
+          "type": "polaroids",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ferment_bubbling_beer_gluten_free.webp"
+          }
         }
       },
       "block_order": [
-        "polaroids_HYqHK4"
+        "polaroids_HYqHK4",
+        "polaroids_HrY6tT",
+        "polaroids_TmdJTk"
       ],
       "custom_css": [
         "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: absolute;}"
