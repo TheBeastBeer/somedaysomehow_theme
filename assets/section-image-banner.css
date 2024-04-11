@@ -14,21 +14,19 @@
   --polaroid-count: 3;
 }
 
-.banner__box .banner_polaroids {
+.banner__box .banner__polaroids {
   z-index: 12;
-  transform: rotate(4deg);
+  transform: rotate(4deg) translateX(-8%);
 }
 
-.banner__box .banner_polaroids:first-child {
+.banner__box .banner__polaroids:first-child {
   z-index: 11;
-  transform: rotate(-10deg);
-  transform: translateY(10%);
+  transform: rotate(-10deg) translateY(15%) translateX(-6%);
 }
 
-.banner__box .banner_polaroids:last-child {
+.banner__box .banner__polaroids:last-child {
   z-index: 13;
-  transform: rotate(-3deg);
-  transform: translateY(-10%);
+  transform: rotate(-3deg) translateY(-15%) translateX(-10%);
 }
 
 /* TODO: Implement 'colour scheme' support for polaroids */
