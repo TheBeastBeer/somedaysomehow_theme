@@ -160,7 +160,7 @@
         "polaroids_HYqHK4"
       ],
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: absolute;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Squiggle_background.svg",
