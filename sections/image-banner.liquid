@@ -142,8 +142,8 @@
               {%- if block.settings.image != blank -%}
                 {%- style -%}
                   #Banner-{{ section.id }} .banner__box .banner__polaroids::before {
-                    padding-bottom: {{ block.settings.image.height | divided_by: 2 }}px;
-                    padding-left: {{ block.settings.image.width | divided_by: 2 }}px;
+                    padding-bottom: calc({{ block.settings.image.height | divided_by: 2 }}px / var(--polaroid-count) + 2);
+                    padding-left: calc({{ block.settings.image.width | divided_by: 2 }}px / var(--polaroid-count) + 2);
                     display: block;
                     content: '';
                   }
