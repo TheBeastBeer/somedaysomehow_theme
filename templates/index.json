@@ -149,12 +149,6 @@
     "image_banner_cfeJPf": {
       "type": "image-banner",
       "blocks": {
-        "polaroids_HYqHK4": {
-          "type": "polaroids",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Purple_ginger_beer_gluten_free_create.webp"
-          }
-        },
         "polaroids_HrY6tT": {
           "type": "polaroids",
           "settings": {
@@ -166,12 +160,18 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Ferment_bubbling_beer_gluten_free.webp"
           }
+        },
+        "polaroids_HYqHK4": {
+          "type": "polaroids",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Purple_ginger_beer_gluten_free_create.webp"
+          }
         }
       },
       "block_order": [
-        "polaroids_HYqHK4",
         "polaroids_HrY6tT",
-        "polaroids_TmdJTk"
+        "polaroids_TmdJTk",
+        "polaroids_HYqHK4"
       ],
       "custom_css": [
         "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: absolute;}"
