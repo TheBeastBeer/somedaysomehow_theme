@@ -139,14 +139,22 @@
               </div>
             {%- when 'polaroids' -%}
               <div class="banner__polaroids" {{ block.shopify_attributes }}>
-                {%- assign polaroid_height = block.settings.image.width
-                  | divided_by: block.settings.image.aspect_ratio
-                -%}
-                {{
-                  block.settings.image
-                  | image_url: width: 500
-                  | image_tag: width: block.settings.image.width, height: polaroid_height
-                }}
+                {%- if block.settings.image != blank -%}
+                  {%- style -%}
+                    #Banner-{{ section.id }} .banner__box .banner__polaroids::before {
+                      paddding-bottom: calc({{ block.settings.image.height | divided_by: 2 }} + var(--polaroid-padding-bottom));
+                    }
+                  {%- endstyle -%}
+
+                  {%- assign polaroid_height = block.settings.image.width
+                    | divided_by: block.settings.image.aspect_ratio
+                  -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 500
+                    | image_tag: width: block.settings.image.width, height: polaroid_height
+                  }}
+                {%- endif -%}
               </div>
           {%- endcase -%}
         {%- endfor -%}

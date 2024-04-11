@@ -16,13 +16,17 @@
 
 /* TODO: Implement 'colour scheme' support for polaroids */
 .banner__box .banner__polaroids {
+  --polaroid-padding-bottom: 1.5em;
   float: left;
-	padding: 10px 10px 25px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+	padding: 0.5em 0.5em var(--polaroid-padding-bottom);
 	background: #eee;
 	border: 1px solid #fff;
   box-shadow: 0px 2px 15px #333;
-  height: calc(100% / 4); /*(var(--polaroid-count) + 1))*/
-  width: auto;
+  height: 100%;
+  width: 100%;
 }
 
 .banner__polaroids img {
