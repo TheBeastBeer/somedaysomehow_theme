@@ -157,7 +157,7 @@
         "default_size_2": true,
         "stack_images": false,
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "adapt",
         "color_scheme": "",
         "animate_second_image": false,
         "image_behavior": "none",
