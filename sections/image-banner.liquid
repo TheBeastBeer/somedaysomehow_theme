@@ -139,7 +139,7 @@
                 {%- endif -%}
               </div>
             {%- when 'polaroids' -%}
-              <div class="banner__polaroids" {{ block.shopify_attributes }}>
+              <div class="banner__polaroids media" {{ block.shopify_attributes }}>
                 {%- if block.settings.image != blank -%}
                   {%- style -%}
                     #Banner-{{ section.id }} .banner__box .banner__polaroids::before {
