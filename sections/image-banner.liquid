@@ -15,6 +15,7 @@
     @media screen and (min-width: {{ section.settings.image.width }}px) {
       #Banner-{{ section.id }}::before,
       #Banner-{{ section.id }} .banner__media::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
       }
@@ -142,7 +143,8 @@
                 {%- if block.settings.image != blank -%}
                   {%- style -%}
                     #Banner-{{ section.id }} .banner__box .banner__polaroids::before {
-                      padding-bottom: calc({{ block.settings.image.height | divided_by: 2 }}px + var(--polaroid-padding-bottom));
+                      padding-bottom: {{ block.settings.image.height | divided_by: 2 }}px;
+                      padding-left: {{ block.settings.image.width | divided_by: 2 }}px;
                       display: block;
                       content: '';
                     }
