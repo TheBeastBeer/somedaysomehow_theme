@@ -103,7 +103,7 @@
     "image_banner_qtJUwM": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static; padding-top: 0.75em;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; padding-top: 0.75em;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/No_boredom_background.svg",
@@ -206,7 +206,7 @@
     "image_banner_mYq6qF": {
       "type": "image-banner",
       "custom_css": [
-        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none; position: static;}"
+        "div.banner__media {display: flex; justify-content: center; flex-wrap: wrap; background: none;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Gluten_free_beer_for_dreamers_background.svg",
