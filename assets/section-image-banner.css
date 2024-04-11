@@ -17,7 +17,6 @@
 /* TODO: Implement 'colour scheme' support for polaroids */
 .banner__box .banner__polaroids {
   --polaroid-padding-bottom: 2.5em;
-  float: left;
   position: relative;
   top: 0;
 	background: #eee;
