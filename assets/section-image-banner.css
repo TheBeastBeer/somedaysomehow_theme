@@ -40,7 +40,18 @@
   height: fit-content;
   width: fit-content;
   color: rgb(0 0 0 / 0);
+}
+
+.banner__box .banner__polaroids img, .banner__box .banner__polaroids .photo-overlay::after {
 	padding: 0.33em 0.33em var(--polaroid-padding-bottom);
+}
+
+.banner__box .banner__polaroids .photo-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle, transparent 50%, red 150%);
+  mix-blend-mode: difference;
 }
 
 .banner--stacked {
