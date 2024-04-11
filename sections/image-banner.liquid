@@ -142,7 +142,9 @@
                 {%- if block.settings.image != blank -%}
                   {%- style -%}
                     #Banner-{{ section.id }} .banner__box .banner__polaroids::before {
-                      paddding-bottom: calc({{ block.settings.image.height | divided_by: 2 }} + var(--polaroid-padding-bottom));
+                      padding-bottom: calc({{ block.settings.image.height | divided_by: 2 }} + var(--polaroid-padding-bottom));
+                      display: block;
+                      content: '';
                     }
                   {%- endstyle -%}
 
