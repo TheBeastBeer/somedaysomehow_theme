@@ -14,9 +14,26 @@
   --polaroid-count: 3;
 }
 
+.banner__box .banner_polaroids {
+  z-index: 12;
+  transform: rotate(4deg);
+}
+
+.banner__box .banner_polaroids:first-child {
+  z-index: 11;
+  transform: rotate(-10deg);
+  transform: translateY(10%);
+}
+
+.banner__box .banner_polaroids:last-child {
+  z-index: 13;
+  transform: rotate(-3deg);
+  transform: translateY(-10%);
+}
+
 /* TODO: Implement 'colour scheme' support for polaroids */
 .banner__box .banner__polaroids {
-  --polaroid-padding-bottom: 2.5em;
+  --polaroid-padding-bottom: 2em;
   position: relative;
   top: 0;
 	background: #eee;
@@ -28,7 +45,7 @@
 }
 
 .banner__box .banner__polaroids img {
-	padding: 0.5em 0.5em var(--polaroid-padding-bottom);
+	padding: 0.33em 0.33em var(--polaroid-padding-bottom);
 }
 
 .banner--stacked {
