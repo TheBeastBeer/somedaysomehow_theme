@@ -2,23 +2,12 @@
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
-    @media screen and (max-width: {{ section.settings.image.width | minus: 1 }}px) {
-      #Banner-{{ section.id }}::before,
-      #Banner-{{ section.id }} .banner__media::before,
-      #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: {{ section.settings.image.height }}px;
-        content: '';
-        display: block;
-      }
-    }
-
-    @media screen and (min-width: {{ section.settings.image.width }}px) {
-      #Banner-{{ section.id }}::before,
-      #Banner-{{ section.id }} .banner__media::before {
-        padding-bottom: {{ section.settings.image.height }}px;
-        content: '';
-        display: block;
-      }
+    #Banner-{{ section.id }}::before,
+    #Banner-{{ section.id }} .banner__media::before,
+    #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+      padding-bottom: {{ section.settings.image.height }}px;
+      content: '';
+      display: block;
     }
   {%- endstyle -%}
 {%- endif -%}
