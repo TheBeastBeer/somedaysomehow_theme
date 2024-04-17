@@ -1181,6 +1181,9 @@
         "default_size_2": {
           "label": "Set to default size"
         },
+        "image_background_color": {
+          "label": "Background Color"
+        },
         "image_overlay_opacity": {
           "label": "Image overlay opacity"
         },

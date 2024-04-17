@@ -222,6 +222,7 @@
 }
 
 .banner__media {
+  background-color: var(--image-background-color, black);
   height: 100%;
   position: absolute;
   left: 0;

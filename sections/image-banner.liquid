@@ -29,6 +29,14 @@
   }
 {%- endstyle -%}
 
+{%- if section.settings.image_background_color != blank -%}
+  {%- style -%}
+    :root {
+      --image-background-color: {{ section.settings.image_background_color }};
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
 {%- for block in section.blocks -%}
   {%- if block.type == 'polaroids' -%}
     {%- if block.settings.image != blank -%}
@@ -216,6 +224,11 @@
       "id": "stack_images",
       "default": true,
       "label": "t:sections.image-banner.settings.stack_images.label"
+    },
+    {
+      "type": "color",
+      "id": "image_background_color",
+      "label": "t:sections.image-banner.settings.image_background_color.label"
     },
     {
       "type": "range",
