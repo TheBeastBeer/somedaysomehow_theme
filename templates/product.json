@@ -7,8 +7,8 @@
       ],
       "settings": {
         "image": "{{ product.metafields.product_page.hero.value }}",
-        "default_size_1": true,
-        "default_size_2": true,
+        "default_size_1": false,
+        "default_size_2": false,
         "stack_images": false,
         "image_background_color": "{{ product.metafields.product.color.value }}",
         "image_overlay_opacity": 0,
@@ -17,10 +17,10 @@
         "animate_second_image": false,
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "main": {
