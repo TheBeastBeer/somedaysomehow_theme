@@ -229,10 +229,6 @@
   width: 100%;
 }
 
-.banner__media:first-child {
-  background-color: var(--image-background-color, black);
-}
-
 .banner__media-half {
   width: 50%;
 }
