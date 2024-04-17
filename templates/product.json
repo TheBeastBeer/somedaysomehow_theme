@@ -2,11 +2,15 @@
   "sections": {
     "image_banner_yHyicW": {
       "type": "image-banner",
+      "custom_css": [
+
+      ],
       "settings": {
         "image": "{{ product.metafields.product_page.hero.value }}",
         "default_size_1": true,
         "default_size_2": true,
         "stack_images": false,
+        "image_background_color": "{{ product.metafields.product.color.value }}",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "color_scheme": "",
