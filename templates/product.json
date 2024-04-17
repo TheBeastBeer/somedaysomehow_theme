@@ -3,7 +3,7 @@
     "image_banner_zjMzRx": {
       "type": "image-banner",
       "custom_css": [
-        ".banner__media > img {object-fit: contain; background: radial-gradient( circle, var(--image-background-color, black) 25%, var(--image-background-color-dark, black) 80%, black 150% );}"
+        ".banner__media > img {object-fit: contain; background: radial-gradient( circle, var(--image-background-color, black) 25%, var(--image-background-color-dark, black) 100%, black 150% );}"
       ],
       "settings": {
         "image": "{{ product.metafields.product_page.hero.value }}",
