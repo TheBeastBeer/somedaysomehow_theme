@@ -222,12 +222,15 @@
 }
 
 .banner__media {
-  background-color: var(--image-background-color, black);
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.banner__media:first-child {
+  background-color: var(--image-background-color, black);
 }
 
 .banner__media-half {
