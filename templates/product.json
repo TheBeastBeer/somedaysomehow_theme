@@ -1,9 +1,9 @@
 {
   "sections": {
-    "image_banner_yHyicW": {
+    "image_banner_zjMzRx": {
       "type": "image-banner",
       "custom_css": [
-
+        ".banner__media > img {object-fit: cover; background: radial-gradient(circle, var(--image-background-color, black) 50%, var(--image-background-color-dark, black) 80%, black 125%);}"
       ],
       "settings": {
         "image": "{{ product.metafields.product_page.hero.value }}",
@@ -93,7 +93,7 @@
     }
   },
   "order": [
-    "image_banner_yHyicW",
+    "image_banner_zjMzRx",
     "main",
     "related-products"
   ]
