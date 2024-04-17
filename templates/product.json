@@ -4,7 +4,7 @@
       "type": "image-banner",
       "custom_css": [
         ".banner__media > img {object-fit: contain;}",
-        ".banner__media:first-child::after {background: radial-gradient( circle, var(--image-background-color, black) 50%, var(--image-background-color-dark, black) 80%, black 125% ); z-index: -9999;}"
+        ".banner__media:first-child::after {background: radial-gradient( circle, var(--image-background-color, black) 25%, var(--image-background-color-dark, black) 100%, black 150% ); z-index: -9999;}"
       ],
       "settings": {
         "image": "{{ product.metafields.product_page.hero.value }}",
