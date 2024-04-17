@@ -448,9 +448,8 @@
   content: '';
   position: absolute;
   top: 0;
-  background: #000000;
-  opacity: 0;
-  z-index: -9999;
+  color: rgba(0 0 0 / 0);
+  z-index: 9999;
   width: 100%;
   height: 100%;
 }
