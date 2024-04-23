@@ -46,7 +46,7 @@
         "buy_buttons"
       ],
       "custom_css": [
-
+        "@media screen and (min-width: 750px) {div.product {min-height: var(--max-banner-height); }}"
       ],
       "settings": {
         "enable_sticky_info": false,
