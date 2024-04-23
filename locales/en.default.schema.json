@@ -2375,6 +2375,9 @@
         "enable_sticky_info": {
           "label": "Enable sticky content on desktop"
         },
+        "hide_media": {
+          "label": "Hide media gallery"
+        },
         "gallery_layout": {
           "label": "Desktop layout",
           "options__1": {
