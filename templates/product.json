@@ -3,6 +3,7 @@
     "image_banner_zjMzRx": {
       "type": "image-banner",
       "custom_css": [
+        "section {position: absolute; width: 100%;}",
         ".banner__media > img {object-fit: contain;}",
         ".banner__media:first-child::after {background: radial-gradient( circle, var(--image-background-color, black) 5%, var(--image-background-color-dark, black) 50%, black 125% ); z-index: -9999;}"
       ],
