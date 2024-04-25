@@ -1,0 +1,2 @@
+npx tailwindcss -i ./tailwind.css -o ./assets/style.css
+git add -A ./assets/style.css
