@@ -92,6 +92,7 @@ function triggerHoverAnimationOnScroll() {
 
   if(window.matchMedia("(hover: none)").matches || window.matchMedia("(pointer: coarse)").matches) {
 
+  // const animationTriggerElements = Array.from(document.querySelectorAll('[data-type="card"]'));
   const animationTriggerElements = Array.from(document.getElementsByClassName('card-wrapper'));
 
   if (animationTriggerElements.length === 0) return;
@@ -119,8 +120,10 @@ function triggerHoverAnimationOnScroll() {
           }
           
           if (visibleAmount <= 0.4 && isHovering) {
+            // delete element.dataset.view;
             element.classList.remove('hovering');
           } else if (visibleAmount >= 0.6) {
+            // element.dataset.view = "hovering";
             element.classList.add('hovering');
             isHovering = true;
           }
