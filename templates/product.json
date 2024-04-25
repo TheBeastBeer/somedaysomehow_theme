@@ -28,6 +28,19 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "icon_with_text_p6t6nQ": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "shopify:\/\/shop_images\/Someday_somehow_white_symbol_transparent_tight.png",
+            "heading_1": "Hops, hops,  and more hops",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -42,6 +55,7 @@
         }
       },
       "block_order": [
+        "icon_with_text_p6t6nQ",
         "price",
         "buy_buttons"
       ],
