@@ -18,12 +18,12 @@
       :root,
     {%- endif -%}
     .color-{{ scheme.id }} {
-      --color-background: {{ scheme.settings.background | color_extract: 'red' }},{{ scheme.settings.background | color_extract: 'green' }},{{ scheme.settings.background | color_extract: 'blue' }};
-    {%- if scheme.settings.background_gradient != empty -%}
+    --color-background: {{ scheme.settings.background | color_extract: 'red' }},{{ scheme.settings.background | color_extract: 'green' }},{{ scheme.settings.background | color_extract: 'blue' }};
+    {% if scheme.settings.background_gradient != empty %}
       --gradient-background: {{ scheme.settings.background_gradient }};
     {%- else -%}
       --gradient-background: {{ scheme.settings.background }};
-    {%- endif -%}
+    {% endif %}
 
     {%- liquid
       assign background_color = scheme.settings.background
