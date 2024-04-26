@@ -27,11 +27,11 @@
       :root,
     {%- endif %}
     .color-{{ scheme.id }} {
-      --color-background: {{ scheme.settings.background | color_to_rgb  }};
+      --color-background: {{ scheme.settings.background | color_extract: 'red' }},{{ scheme.settings.background | color_extract: 'green' }},{{ scheme.settings.background | color_extract: 'blue' }};
     {% if scheme.settings.background_gradient != empty %}
-      --gradient-background: {{ scheme.settings.background_gradient | color_to_rgb  }};
+      --gradient-background: {{ scheme.settings.background_gradient }};
     {% else %}
-      --gradient-background: {{ scheme.settings.background | color_to_rgb  }};
+      --gradient-background: {{ scheme.settings.background }};
     {% endif %}
 
     {% liquid
@@ -46,14 +46,14 @@
       endif
     %}
 
-    --color-foreground: {{ scheme.settings.text | color_to_rgb  }};
-    --color-background-contrast: {{ background_color_contrast | color_to_rgb  }};
-    --color-shadow: {{ scheme.settings.shadow | color_to_rgb  }};
-    --color-button: {{ scheme.settings.button | color_to_rgb  }};
-    --color-button-text: {{ scheme.settings.button_label | color_to_rgb  }};
-    --color-secondary-button: {{ scheme.settings.background | color_to_rgb  }};
+    --color-foreground: {{ scheme.settings.text | color_extract: 'red' }},{{ scheme.settings.text | color_extract: 'green' }},{{ scheme.settings.text | color_extract: 'blue' }};
+    --color-background-contrast: {{ background_color_contrast | color_extract: 'red' }},{{ background_color_contrast | color_extract: 'green' }},{{ background_color_contrast | color_extract: 'blue' }};
+    --color-shadow: {{ scheme.settings.shadow | color_extract: 'red' }},{{ scheme.settings.shadow | color_extract: 'green' }},{{ scheme.settings.shadow | color_extract: 'blue' }};
+    --color-button: {{ scheme.settings.button | color_extract: 'red' }},{{ scheme.settings.button | color_extract: 'green' }},{{ scheme.settings.button | color_extract: 'blue' }};
+    --color-button-text: {{ scheme.settings.button_label | color_extract: 'red' }},{{ scheme.settings.button_label | color_extract: 'green' }},{{ scheme.settings.button_label | color_extract: 'blue' }};
+    --color-secondary-button: {{ scheme.settings.background | color_extract: 'red' }},{{ scheme.settings.background | color_extract: 'green' }},{{ scheme.settings.background | color_extract: 'blue' }};
     --color-secondary-button-text: var(--color-link);
-    --color-link: {{ scheme.settings.secondary_button_label | color_to_rgb  }};
+    --color-link: {{ scheme.settings.secondary_button_label | color_extract: 'red' }},{{ scheme.settings.secondary_button_label | color_extract: 'green' }},{{ scheme.settings.secondary_button_label | color_extract: 'blue' }};
     --color-badge-foreground: var(--color-foreground);
     --color-badge-background: var(--color-secondary-button);
     --color-badge-border: var(--color-foreground);
