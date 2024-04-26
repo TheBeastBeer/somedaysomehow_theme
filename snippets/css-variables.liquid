@@ -23,7 +23,7 @@
       --gradient-background: {{ scheme.settings.background_gradient }};
     {%- else -%}
       --gradient-background: {{ scheme.settings.background }};
-    {% endif %}
+    {%- endif -%}
 
     {%- liquid
       assign background_color = scheme.settings.background

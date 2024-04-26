@@ -38,7 +38,7 @@
 
     {{ content_for_header }}
 
-    {% # CSS custom properties, in other files, cause problems with Shopify editor %}
+    {% # CSS custom properties, in separate css files, cause problems with Shopify editor %}
     {% render 'css-variables' %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
