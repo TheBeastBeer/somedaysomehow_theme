@@ -4,7 +4,6 @@
       "type": "image-banner",
       "custom_css": [
         ".banner__media:nth-child(2).banner--stacked > img {height: auto; position: relative; max-width: min(95vw, calc(var(--max-banner-height) * 0.66));}",
-        ".banner__media:first-child:not(.banner--stacked) > img {object-position: 75% 50%;}",
         ".banner {margin-bottom: 1em;}"
       ],
       "settings": {
@@ -13,6 +12,7 @@
         "image_2": "shopify:\/\/shop_images\/Logo_only_Someday_Somehow_gluten_free.png",
         "default_size_2": false,
         "stack_images": true,
+        "image_background_color": "",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "color_scheme": "scheme-3",
@@ -35,6 +35,7 @@
         "default_size_1": true,
         "default_size_2": true,
         "stack_images": false,
+        "image_background_color": "",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "color_scheme": "",
@@ -110,6 +111,7 @@
         "default_size_1": true,
         "default_size_2": true,
         "stack_images": false,
+        "image_background_color": "",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "color_scheme": "",
@@ -181,6 +183,7 @@
         "default_size_1": true,
         "default_size_2": true,
         "stack_images": false,
+        "image_background_color": "",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "color_scheme": "",
@@ -227,6 +230,7 @@
         "default_size_1": true,
         "default_size_2": true,
         "stack_images": false,
+        "image_background_color": "",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "color_scheme": "",
