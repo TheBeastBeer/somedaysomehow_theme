@@ -27,11 +27,11 @@
       :root,
     {%- endif %}
     .color-{{ scheme.id }} {
-      --color-background: {{ scheme.settings.background }};
+      --color-background: {{ scheme.settings.background | color_to_rgb  }};
     {% if scheme.settings.background_gradient != empty %}
-      --gradient-background: {{ scheme.settings.background_gradient }};
+      --gradient-background: {{ scheme.settings.background_gradient | color_to_rgb  }};
     {% else %}
-      --gradient-background: {{ scheme.settings.background }};
+      --gradient-background: {{ scheme.settings.background | color_to_rgb  }};
     {% endif %}
 
     {% liquid
@@ -46,18 +46,18 @@
       endif
     %}
 
-    --color-foreground: {{ scheme.settings.text }};
-    --color-background-contrast: {{ background_color_contrast }};
-    --color-shadow: {{ scheme.settings.shadow }};
-    --color-button: {{ scheme.settings.button }};
-    --color-button-text: {{ scheme.settings.button_label }};
-    --color-secondary-button: {{ scheme.settings.background }};
+    --color-foreground: {{ scheme.settings.text | color_to_rgb  }};
+    --color-background-contrast: {{ background_color_contrast | color_to_rgb  }};
+    --color-shadow: {{ scheme.settings.shadow | color_to_rgb  }};
+    --color-button: {{ scheme.settings.button | color_to_rgb  }};
+    --color-button-text: {{ scheme.settings.button_label | color_to_rgb  }};
+    --color-secondary-button: {{ scheme.settings.background | color_to_rgb  }};
     --color-secondary-button-text: var(--color-link);
-    --color-link: {{ scheme.settings.secondary_button_label }};
+    --color-link: {{ scheme.settings.secondary_button_label | color_to_rgb  }};
     --color-badge-foreground: var(--color-foreground);
     --color-badge-background: var(--color-secondary-button);
     --color-badge-border: var(--color-foreground);
-    --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+    --payment-terms-background-color: {{ scheme.settings.background | color_to_rgb }};
   }
   {% endfor %}
 
