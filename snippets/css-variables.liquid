@@ -48,6 +48,7 @@
     --color-badge-border: var(--color-foreground);
     --payment-terms-background-color: {{ scheme.settings.background | color_to_rgb }};
   }
+
   {%- endfor -%}
 
   {{ scheme_classes | prepend: 'body' }} {
