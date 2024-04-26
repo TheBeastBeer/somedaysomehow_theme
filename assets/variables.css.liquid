@@ -6,7 +6,7 @@
     :root,
   {%- endif %}
   .color-{{ scheme.id }} {
-    --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+    --color-background: {{ scheme.settings.background }};
   {% if scheme.settings.background_gradient != empty %}
     --gradient-background: {{ scheme.settings.background_gradient }};
   {% else %}
@@ -25,7 +25,7 @@
     endif
   %}
 
-  --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+  --color-foreground: {{ scheme.settings.text }};
   --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
   --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
   --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
